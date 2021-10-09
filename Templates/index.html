@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Paraphrasing Demo Tool</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='assets/img/Aileadlogo.png')}}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/Aileadlogo.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+
+  <link href="{{ url_for('static', filename='assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+  <link href=" {{ url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href=" {{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="  {{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href=" {{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href=" {{ url_for('static', filename='assets/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Demo for Paraphrasing tool
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">5912tech@gmail.com</a>
+        <i class="bi bi-phone-fill phone-icon"></i> +234 810 0758 862
+      </div>
+      <div class="social-links d-none d-md-block">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html">Demo App</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/Aileadlogo.png" alt="" class="img-fluid"></a> -->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('services')}}">Summarizer & paraphraser </a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url('assets/img/slide/slide-1.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content container">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Demo App</span></h2>
+                <p class="animate__animated animate__fadeInUp"> Our Tool is a state-of-the-art AI technology to make
+                  writing painless. Founded under the belief that learning and applying knowledge is more rewarding than
+                  the mundane aspects of writing, The QuillBot team seeks to advance that idea by, automating those
+                  tasks and allowing
+                  you to focus on what you write, not how you should write it..</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background-image: url('assets/img/slide/slide-2.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content container">
+                <h2 class="animate__animated animate__fadeInDown">Text Summarisation</h2>
+                <p class="animate__animated animate__fadeInUp">Summarization is the task of condensing a piece of text
+                  to a shorter version, reducing the size of the initial text while at the same time</p>
+                <a href="#about"
+                  class="btn-get-started animate__animated animate__The abstractive text summarization algorithms create new phrases and sentences that relay the most useful information from the original text fadeInUp scrollto">Read
+                  More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row no-gutters">
+          <div class="col-lg-6 video-box">
+            <img src="{{ url_for('static', filename='assets/img/about.jpg')}}" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+              data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+            <div class="section-title">
+              <h2>About Us</h2>
+              <p>With a motivated team, we have been in the business over 10 years. That is why we have the experience
+                and dedication to always look for new creative ways to bring a smile to your face.</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">SOTA NLP tools</a></h4>
+              <p class="description">Summarization is the task of condensing a piece of text to a shorter version,
+                reducing the size of the initial text while at the same time preserving key informational elements and
+                the meaning of content</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Efficient Workforce</a></h4>
+              <p class="description">At Demo app we give priority to our users and this stems from our great and
+                efficient workforce.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= About Lists Section =======
+    <section class="about-lists">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+            <span>01</span>
+            <h4>Lorem Ipsum</h4>
+            <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+            <span>02</span>
+            <h4>Repellat Nihil</h4>
+            <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+          </div> -->
+    <!-- 
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+            <span>03</span>
+            <h4> Ad ad velit qui</h4>
+            <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+          </div>
+
+          
+
+        </div> -->
+
+    <!-- </div>
+    </section>End About Lists Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
+              <span data-purecounter-start="0" data-purecounter-end="100000" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>users</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-document-folder" style="color: #c042ff;"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="count-box">
+              <i class="bi bi-live-support" style="color: #46d1ff;"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12000" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+            <div class="count-box">
+              <i class="bi bi-users-alt-5" style="color: #ffb459;"></i>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-chat-left-dots"></i></div>
+            <h4 class="title"><a href="">Text Summarisation</a></h4>
+            <p class="description">Supervised text summarization is very much like supervised keyphrase extraction.
+              Basically, if you have a collection of documents and human-generated summaries for easy read and
+              comprehension</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-bounding-box"></i></div>
+            <h4 class="title"><a href="">Paraphrasing Tools</a></h4>
+            <p class="description">Paraphrasing tool helps millions of people rewrite and enhance any sentence,
+              paragraph, or article using state-of-the-art AI</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-globe"></i></div>
+            <h4 class="title"><a href="">Consulting</a></h4>
+            <p class="description">Our consultants provide expert opinions, analysis, and recommendations to
+              organizations or individuals, based on their own expertise. They're essentially fixers, serving as
+              objective troubleshooters, and providing strategies to prevent problems and improve performance of your
+              print and soft materials.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+    <!-- ======= Contact Us Section ======= -->
+    <!-- <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Try our text Summarization tool</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Enter your text here"
+                    required></textarea>
+                </div>
+                <div class="my-3">
+
+                  <div class="text-center"><button type="submit">Summarise</button></div>
+
+                  <br>
+                  <br>
+
+                  <div class="my-3">
+
+
+            </form>
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+              </div>
+
+              <br>
+              <br>
+
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Your summarised text here"
+                  required></textarea>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="my-3">
+              </div>
+
+          </div>
+
+        </div>
+    </section>End Contact Us Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Model Demo</h3>
+            <p>
+              Lagos State , Nigeria<br><br>
+              <strong>Phone:</strong> +234 8100 7588 62<br>
+              <strong>Email:</strong> 5912tech@gmail.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Paraphrasing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Consulting</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Text Summarisation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Grammar Checker</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Interested in joining our mailint list? Click to join</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Demo Web</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Designed by <a href="https://bootstrapmade.com/">5912 technologies</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="  {{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter.js')}}"></script>
+  <script src=" {{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src=" {{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
